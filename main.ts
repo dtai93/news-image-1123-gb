@@ -1,11 +1,18 @@
-// A working news-image-daily entry (Node 22, standard library only): its image is the entry.png beside this file, and
-// the program copies it to /output/entry.png. A starting point, not a winner: replace the image. The gate takes a
-// whole PNG or JPEG of at most 1 MiB and 1024 by 1024 pixels, and the judge sees exactly the bytes copied.
-//
-// Outside the grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
-//   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+// Monday 23 November 2026, drawn as one front page. The date is the masthead.
+// Under it: six figures, a region bar, three illustrated leads, ten numbered cards,
+// a lat/lon pin map, an also-on list, a UTC timeline and a date-check of earlier reports.
+// The program copies that image to $MAKEFUN_OUTPUT_DIR/entry.png, or to /output.
 
-import { copyFileSync } from 'node:fs';
+import { copyFileSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-copyFileSync(new URL('./entry.png', import.meta.url), join(process.env.MAKEFUN_OUTPUT_DIR ?? '/output', 'entry.png'));
+const src = new URL('./entry.png', import.meta.url);
+const buf = readFileSync(src);
+if (buf.length >= 1048576) throw new Error('entry.png is 1 MiB or larger');
+if (buf.subarray(0, 8).toString('hex') !== '89504e470d0a1a0a') throw new Error('entry.png is not a PNG');
+if (buf.subarray(12, 16).toString('ascii') !== 'IHDR') throw new Error('entry.png has no IHDR');
+const width = buf.readUInt32BE(16);
+const height = buf.readUInt32BE(20);
+if (width !== 1024 || height !== 1024) throw new Error(`entry.png is ${width}x${height}`);
+
+copyFileSync(src, join(process.env.MAKEFUN_OUTPUT_DIR ?? '/output', 'entry.png'));

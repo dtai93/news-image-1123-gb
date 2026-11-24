@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 1024px; height: 1024px; overflow: hidden; background: #f3eee4; }
+#app {
+  width: 1024px; height: 1024px; overflow: hidden;
+  padding: 6px 9px 5px; display: flex; flex-direction: column; gap: 3px;
+  color: #1a140f; font-family: "Source Sans 3", "Source Sans Pro", sans-serif;
+}
+.krow { display: flex; justify-content: space-between; align-items: baseline; height: 13px; }
+.kicker { font: 700 10px/13px "Source Sans 3", sans-serif; letter-spacing: .16em; }
+.count { font: 650 9px/13px "Source Sans 3", sans-serif; letter-spacing: .01em; }
+.date {
+  margin: 0; height: 54px; text-align: center; white-space: nowrap;
+  font: 700 50px/54px "Playfair Display", "Libre Baskerville", serif;
+  letter-spacing: -0.6px; border-bottom: 3px double #1a140f;
+}
+.tag {
+  margin: 0; height: 15px; text-align: center; white-space: nowrap;
+  font: italic 12px/15px "Newsreader", "Source Serif Pro", serif; color: #3a3128;
+}
+.figs { display: grid; grid-template-columns: repeat(6, 1fr); height: 40px; border-bottom: 1.5px solid #1a140f; }
+.fig { text-align: center; padding: 1px 3px 0; border-right: 1px solid #ddd4c6; overflow: hidden; }
+.fig:last-child { border-right: 0; }
+.fig b { display: block; font: 800 18px/1.05 "Source Serif Pro", serif; }
+.fig span { display: block; font: 600 7.5px/1.15 "Source Sans 3", sans-serif; color: #3f362e; white-space: nowrap; }
+.rbar { display: flex; height: 15px; width: 100%; overflow: hidden; }
+.rseg {
+  color: #fff; text-align: center; white-space: nowrap; overflow: hidden;
+  font: 700 8px/15px "Source Sans 3", sans-serif; letter-spacing: .03em;
+}
+.leads { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; height: 206px; }
+.cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; height: 204px; }
+.mid { display: grid; grid-template-columns: 392px 1fr; gap: 6px; height: 244px; min-height: 0; }
+.utc { height: 36px; background: #1b1714; color: #f6f1e7; padding: 2px 6px 3px; }
+.check { height: 128px; border: 2px solid #b42318; padding: 2px 6px 3px; background: #fffdfb; overflow: hidden; }
+.foot { height: 28px; overflow: hidden; }

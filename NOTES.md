@@ -30,3 +30,6 @@ Unconfirmed suggested leads, dropped rather than drawn as Monday news:
 Earlier events kept in `date_check`: Peru quake and Bayelsa capsize Friday 20 Nov, Meza Flores arrest Friday, Shenzhen summit 19 Nov, Friday's market correction, Merkury and the Manchester evacuation Sunday.
 
 Done: research file and `tools/check-stories.mjs`. Next session renders the image; this one does not.
+
+Done: rendered the 1024 front page from data/stories.json (3 leads, 10 cards, pin map, also-on, UTC strip, date-check). entry.png is a 24-bit PNG, about 253 KB.
+Next: none for this session. Do not add stories. If a later pass tightens anything, keep deks one line and the also-list inside the box.
