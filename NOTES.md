@@ -33,3 +33,6 @@ Done: research file and `tools/check-stories.mjs`. Next session renders the imag
 
 Done: rendered the 1024 front page from data/stories.json (3 leads, 10 cards, pin map, also-on, UTC strip, date-check). entry.png is a 24-bit PNG, about 253 KB.
 Next: none for this session. Do not add stories. If a later pass tightens anything, keep deks one line and the also-list inside the box.
+
+Done: polished the Monday 23 November 2026 page. The kicker says 7 regions, matching the bar, with Africa 0 the narrowest. The date-check names Sunday 22 November 2026, and the weekend Hormuz and Gaza line is dated Sat 21–Sun 22. Card drawings are unsquashed and the Hormuz mines sit in the channel. entry.png is 1024×1024, about 231 KB.
+Next: none. Do not add stories.

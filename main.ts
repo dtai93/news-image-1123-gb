@@ -1,6 +1,8 @@
-// Monday 23 November 2026, drawn as one front page. The date is the masthead.
-// Under it: six figures, a region bar, three illustrated leads, ten numbered cards,
-// a lat/lon pin map, an also-on list, a UTC timeline and a date-check of earlier reports.
+// Monday 23 November 2026 front page. The masthead names that day.
+// Six figures, a seven-region bar (Africa 0), three illustrated leads — Huang and the
+// Nasdaq, drones on two Russian refineries, three mined Hormuz tankers — then ten cards,
+// a pin map, also-on stories 14–39, a UTC strip, and a date-check of Sunday 22 November
+// 2026 and earlier days, left out of the Monday news.
 // The program copies that image to $MAKEFUN_OUTPUT_DIR/entry.png, or to /output.
 
 import { copyFileSync, readFileSync } from 'node:fs';

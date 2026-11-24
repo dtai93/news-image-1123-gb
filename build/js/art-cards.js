@@ -1,5 +1,5 @@
 function cardSvg(inner) {
-  return `<svg viewBox="0 0 200 44" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><g transform="translate(0,4) scale(1,0.56)">${inner}</g></svg>`;
+  return `<svg viewBox="0 0 200 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">${inner}</svg>`;
 }
 const CARD = {
   4: `<rect width="200" height="64" fill="#1e1b4b"/>

@@ -31,8 +31,8 @@ const FIG = [
   ["+6.5%", "#15803d", "Nasdaq close", "Santa Clara, after Huang"],
   ["192", "#b91c1c", "Ukrainian drones downed", "Russia's overnight count"],
   ["3", "#c2410c", "tankers Iran says mined", "Strait of Hormuz"],
-  ["74", "#7e22ce", "lashes given in Qom", "a singer and four men"],
-  ["259", "#1d4ed8", "Democratic House seats", "North Carolina called"],
+  ["74", "#7e22ce", "lashes each, in Qom", "a singer and four men"],
+  ["259", "#1d4ed8", "Democratic House seats", "total after N. Carolina"],
   ["647", "#9a3412", "Yemen strikes claimed", "anti-Houthi government"]
 ];
 const ALSO = [
@@ -82,7 +82,7 @@ const LEFT = [
   ["Fri 20", "US stocks enter a correction"],
   ["Fri 20", "Rikers plan unveiled; Chambers bailed"],
   ["Thu 19", "ICJ Rohingya judgment; Shenzhen summit"],
-  ["Weekend", "Earlier Hormuz strikes; Gaza deaths Sat–Sun"],
+  ["Sat 21–Sun 22", "Hormuz strikes; Gaza deaths, not Monday"],
   ["Sat 21", "ICE arrest of a father and daughter, Sea-Tac"]
 ];
 function cardHtml(s, kind) {
@@ -96,7 +96,7 @@ function cardHtml(s, kind) {
 }
 function regionBar() {
   const rows = [["Americas", 11], ["Europe", 9], ["Middle East", 11], ["Asia-Pacific", 5], ["Oceania", 2], ["World", 1], ["Africa", 0]];
-  const w = { Americas: 249, Europe: 204, "Middle East": 249, "Asia-Pacific": 114, Oceania: 72, World: 58, Africa: 60 };
+  const w = { Americas: 250, Europe: 200, "Middle East": 250, "Asia-Pacific": 112, Oceania: 78, World: 64, Africa: 52 };
   return `<div class="rbar">${rows.map(([k, n]) => `<div class="rseg" style="width:${w[k]}px;background:${REG[k][0]}">${REG[k][1]} ${n}</div>`).join("")}</div>`;
 }
 async function boot() {
@@ -108,7 +108,7 @@ async function boot() {
   const ticks = data.timeline.map(t => `<div class="tick"><b>${t.utc}</b><span>${esc(t.text)}</span></div>`).join("");
   const left = LEFT.map(([d, e]) => `<li><b>${d}</b> ${esc(e)}</li>`).join("");
   document.getElementById("app").innerHTML = `
-    <div class="krow"><div class="kicker">THE WORLD IN ONE DAY</div><div class="count">39 STORIES · 6 REGIONS · EVERY ONE DATED MONDAY 23 NOVEMBER 2026</div></div>
+    <div class="krow"><div class="kicker">THE WORLD IN ONE DAY</div><div class="count">39 STORIES · 7 REGIONS · EVERY ONE DATED MONDAY 23 NOVEMBER 2026</div></div>
     <h1 class="date">${esc(data.date)}</h1>
     <p class="tag">${esc(data.tagline)}</p>
     <section class="figs">${figs}</section>
@@ -118,7 +118,7 @@ async function boot() {
     <section class="mid"><div class="mapwrap"><div class="lbl">WHERE IT HAPPENED</div><div id="mapbox"></div></div>
       <div class="also"><div class="lbl">ALSO ON MONDAY 23 NOVEMBER</div><ul class="alsolist">${also}</ul></div></section>
     <section class="utc"><div class="ulbl">THE DAY IN UTC</div><div class="rail">${ticks}</div></section>
-    <section class="check"><p class="clbl">DATE CHECK · LEFT OUT · FIRST REPORTED SATURDAY 21 NOVEMBER OR EARLIER, AND SUNDAY 22</p>
+    <section class="check"><p class="clbl">DATE CHECK · LEFT OUT · SUNDAY 22 NOVEMBER 2026, AND EARLIER DAYS</p>
       <p class="csub">Not drawn as Monday news. The Dymer strike was Sunday; Monday’s new fact, the toll rising to 11, is story 25. Africa: no Monday story confirmed.</p>
       <ul>${left}</ul></section>
     <footer class="foot"><p>REPORTED press account · CLAIM one side, not confirmed · OFFICIAL a state, court or body · RESULT a count that was decided</p>

@@ -50,8 +50,10 @@ function artHormuz() {
     <polygon points="0,0 150,0 118,130 0,130" fill="#c4a574"/>
     <polygon points="250,0 360,0 360,130 230,130" fill="#b8956a"/>
     <polygon points="150,0 250,0 230,130 118,130" fill="#1d4e73"/>
-    ${ship(150, 36)}${ship(168, 64)}${ship(146, 92)}
-    ${[40, 58, 76].map(y => `<circle cx="200" cy="${y}" r="4" fill="#111" stroke="#e5e7eb" stroke-width="1"/>`).join("")}
+    ${ship(158, 34)}${ship(176, 62)}${ship(154, 90)}
+    ${[46, 72, 98].map(y => `<g><circle cx="128" cy="${y}" r="4.5" fill="#111" stroke="#f8fafc" stroke-width="1.2"/>
+      <line x1="128" y1="${y - 8}" x2="128" y2="${y + 8}" stroke="#111" stroke-width="1.3"/>
+      <line x1="120" y1="${y}" x2="136" y2="${y}" stroke="#111" stroke-width="1.3"/></g>`).join("")}
     <g fill="#64748b">${[0, 1, 2, 3].map(i => `<rect x="${20 + i * 22}" y="108" width="16" height="5"/>`).join("")}</g>
     <text x="10" y="42" fill="#1c140f" font-family="Source Sans 3" font-size="9" font-weight="800">IRAN</text>
     <text x="312" y="16" fill="#1c140f" font-family="Source Sans 3" font-size="8" font-weight="800">OMAN</text>`);
